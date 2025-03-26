@@ -20,27 +20,39 @@ public class Main {
             }
         }
         int[] b = new int[count];
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i <b.length; i++) {
             if (a[i] == number) {
                 b[i]=i;
             }
         }
         System.out.println(Arrays.toString(b));
-        minMax(b);
-        int max=0;
-        int min =0;
+        int max= max(b);
+        int min =min(b);
+
 
     }
-    public static void minMax(int[] b){
-        int min=0;
+    public static int max(int[] b){
+
         int max=0;
         for (int i=0; i<b.length; i++ ){
             if (b[i]<b[i+1]){
-                min =b[i];
-            }
-            if (b[i]<b[i+1]){
                 max= b[i+1];
+            } else {
+                max = b[i];
             }
         }
+        return max;
     }
+    public static  int min(int[] b) {
+        int min=0;
+        for (int i=0; i<b.length; i++ ){
+            if (b[i]>b[i+1]){
+                min= b[i+1];
+            } else {
+                min = b[i];
+            }
+        }
+        return min;
+    }
+
 }
