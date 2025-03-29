@@ -14,8 +14,8 @@ public class Main {
         System.out.println(Arrays.toString(a));
         int count = 0;
         int number = scan.nextInt();
-        for (int i = 0; i <a.length; i++) {
-            if (a[i] == number) {
+        for (int j : a) {
+            if (j == number) {
                 count = count + 1;
             }
         }
@@ -26,33 +26,8 @@ public class Main {
             }
         }
         System.out.println(Arrays.toString(b));
-        int max= max(b);
-        int min =min(b);
 
 
-    }
-    public static int max(int[] b){
-
-        int max=0;
-        for (int i=0; i<b.length; i++ ){
-            if (b[i]<b[i+1]){
-                max= b[i+1];
-            } else {
-                max = b[i];
-            }
-        }
-        return max;
-    }
-    public static  int min(int[] b) {
-        int min=0;
-        for (int i=0; i<b.length; i++ ){
-            if (b[i]>b[i+1]){
-                min= b[i+1];
-            } else {
-                min = b[i];
-            }
-        }
-        return min;
     }
 
 }
